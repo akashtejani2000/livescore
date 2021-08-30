@@ -50,6 +50,26 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `en`
+  String get _locale {
+    return Intl.message(
+      'en',
+      name: '_locale',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `live_score`
+  String get appname {
+    return Intl.message(
+      'live_score',
+      name: 'appname',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
@@ -63,10 +83,8 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
 
   @override
   bool isSupported(Locale locale) => _isSupported(locale);
-
   @override
   Future<S> load(Locale locale) => S.load(locale);
-
   @override
   bool shouldReload(AppLocalizationDelegate old) => false;
 
