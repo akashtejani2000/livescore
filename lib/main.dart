@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'constants/route.dart';
 import 'generated/l10n.dart';
 
 void main() {
@@ -12,7 +13,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: "S.of(context)",
+      title: "Live Score",
+      initialRoute: AppRoute.splashScreen,
+      getPages: AppRoute.listRoutes,
       localizationsDelegates: [
         S.delegate,
         DefaultMaterialLocalizations.delegate,

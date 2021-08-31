@@ -1,4 +1,6 @@
 {
   "_locale": "en",
-  "appName": "Live score"
+  "appName": "Live score",
+  "event": "Event",
+  "sportLight": "SportLight"
 }

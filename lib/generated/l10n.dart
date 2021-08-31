@@ -70,6 +70,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Event`
+  String get event {
+    return Intl.message(
+      'Event',
+      name: 'event',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `SportLight`
+  String get sportLight {
+    return Intl.message(
+      'SportLight',
+      name: 'sportLight',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

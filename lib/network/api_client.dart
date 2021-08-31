@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:live_score/network/api_urls.dart';
 import 'package:live_score/utils/app_logger.dart';
 import 'package:live_score/utils/common_utils.dart';
 import 'package:live_score/utils/connectivity_utils.dart';
@@ -15,14 +14,11 @@ part 'api_client.g.dart';
 abstract class ApiClient {
   static late ApiClient _instance;
   static late Dio dio;
-  static final bool doWriteLog = true;
+  static const bool doWriteLog = true;
 
   static ApiClient get instance => _instance;
 
   factory ApiClient._private(Dio dio, {String baseUrl}) = _ApiClient;
-
-  @POST(ApiUrl.registerMobile)
-  Future<dynamic> registerMobile(@Field("mobile_number") String mobileNumber);
 
   /*@GET(ApiUrl.countryList)
   Future<List<CountryData>> getCountry();*/
