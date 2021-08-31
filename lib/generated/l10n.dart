@@ -61,11 +61,11 @@ class S {
     );
   }
 
-  /// `live_score`
-  String get appname {
+  /// `Live score`
+  String get appName {
     return Intl.message(
-      'live_score',
-      name: 'appname',
+      'Live score',
+      name: 'appName',
       desc: '',
       args: [],
     );

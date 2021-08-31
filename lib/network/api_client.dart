@@ -24,36 +24,6 @@ abstract class ApiClient {
   @POST(ApiUrl.registerMobile)
   Future<dynamic> registerMobile(@Field("mobile_number") String mobileNumber);
 
-  @POST(ApiUrl.verifyOtp)
-  Future<dynamic> verifyOtp(
-      @Field("otp") String otp, @Field("token_type") String tokenType);
-
-  @GET(ApiUrl.resendOtp)
-  Future<dynamic> resendOtp();
-
-  @POST(ApiUrl.registration)
-  Future<dynamic> register({
-    @Field("full_name") required String fullName,
-    @Field("email") required String email,
-    @Field("password") required String password,
-    @Field("device_type") required int deviceType,
-    @Field("device_token") required String deviceToken,
-    @Field("mobile_number") required String mobileNumber,
-    @Field("current_version") required String version,
-  });
-
-  @POST(ApiUrl.forgotPassword)
-  Future<dynamic> forgetPassword(@Field("mobile_number") String mobileNumber);
-
-  @POST(ApiUrl.resetPassword)
-  Future<dynamic> resetPassword(@Field("new_password") String newPassword,
-      @Field("confirm_password") String confirmPassword);
-
-  @MultiPart()
-  @POST(ApiUrl.uploadFile)
-  Future<dynamic> uploadFile(
-      @Part(name: "file") File file, @Part(name: "type") int type);
-
   /*@GET(ApiUrl.countryList)
   Future<List<CountryData>> getCountry();*/
 
