@@ -18,7 +18,7 @@ class AppRoute {
         GetPage(name: splashScreen, page: () => SplashScreen()),
         GetPage(name: dashBord, page: () => DashBord()),
         GetPage(name: demo, page: () => UserList()),
-        GetPage(name: demo1, page: () => MyApp()),
+        GetPage(name: demo1, page: () => Demo1()),
         GetPage(name: demo2, page: () => Demo2()),
       ];
 }
