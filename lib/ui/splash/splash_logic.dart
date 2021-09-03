@@ -8,7 +8,7 @@ class SplashLogic extends GetxController {
 
   @override
   void onInit() {
-    timer = Timer(const Duration(milliseconds: 2000),
+    timer = Timer(const Duration(milliseconds: 1000),
         () => Get.toNamed(AppRoute.dashBord));
     super.onInit();
   }

@@ -71,11 +71,11 @@ class S {
     );
   }
 
-  /// `Event`
-  String get event {
+  /// `Cricket`
+  String get cricket {
     return Intl.message(
-      'Event',
-      name: 'event',
+      'Cricket',
+      name: 'cricket',
       desc: '',
       args: [],
     );
