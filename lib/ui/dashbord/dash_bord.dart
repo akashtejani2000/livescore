@@ -19,7 +19,7 @@ class DashBord extends StatelessWidget {
         body: SafeArea(
           child: IndexedStack(
             index: controller.tabIndex.value,
-            children: const [
+            children: [
               Homepage(),
               Event(),
               News(),

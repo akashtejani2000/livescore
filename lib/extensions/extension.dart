@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart' show DateFormat;
 
-part 'data_type.dart';
-
 part 'date_time_extension.dart';
+
+part 'data_type.dart';
 
 part 'string_extension.dart';
 

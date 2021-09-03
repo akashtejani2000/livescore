@@ -7,7 +7,9 @@ import 'package:live_score/ui/homepage/homepage_logic.dart';
 import 'package:live_score/widgets/widgets.dart';
 
 class Homepage extends StatelessWidget {
-  const Homepage({Key? key}) : super(key: key);
+  Homepage({Key? key}) : super(key: key);
+
+  final HomepageLogic homepageLogic = Get.put(HomepageLogic());
 
   @override
   Widget build(BuildContext context) {
