@@ -19,16 +19,7 @@ class _Demo1State extends State<Demo1> {
 
   Future<List<dynamic>> fetchUsers() async {
     var result = await http.get(Uri.parse(apiUrl));
-    print("CRICMATCH :: ${json.decode(result.body)['ci_rslt']['mch']}");
     return json.decode(result.body)['ci_rslt']['mch'];
-  }
-
-  String matchInfo(dynamic user) {
-    return user['\$']['id'];
-  }
-
-  String _location(dynamic user) {
-    return user['location']['country'];
   }
 
   @override
@@ -43,26 +34,19 @@ class _Demo1State extends State<Demo1> {
           builder: (BuildContext context, AsyncSnapshot snapshot) {
             print("SNAPSHOT DATA ${snapshot.data}");
             if (snapshot.hasData) {
-              //print(matchInfo(snapshot.data[0]));
               return ListView.builder(
-                  padding: EdgeInsets.all(8),
-                  itemCount: snapshot.data.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return Card(
-                      child: Column(
-                        children: <Widget>[
-                          Text(matchInfo(snapshot.data[index])),
-                          /* Text(event(snapshot.data[index])),
-                            Text(snapshot.data[index]['\$']['curr_sts']),
-                            Text(snapshot.data[index]['\$']['gmt_dt']),
-                            Text(snapshot.data[index]['\$']['id']),
-                            Text(snapshot.data[index]['\$']['local_dt']),
-                            Text(snapshot.data[index]['\$']['typ']),
-                            Text(snapshot.data[index]['\$']['ord']),*/
-                        ],
-                      ),
-                    );
-                  });
+                padding: EdgeInsets.all(8),
+                itemCount: snapshot.data.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return Card(
+                    child: Column(
+                      children: <Widget>[
+                        Text(snapshot.data[index]),
+                      ],
+                    ),
+                  );
+                },
+              );
             } else {
               return Center(child: CircularProgressIndicator());
             }
