@@ -1,9 +1,6 @@
 import 'dart:async';
-import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:live_score/model/model.dart';
-import 'package:live_score/network/api_urls.dart';
 import 'package:live_score/utils/app_logger.dart';
 import 'package:live_score/utils/common_utils.dart';
 import 'package:live_score/utils/connectivity_utils.dart';
@@ -25,9 +22,9 @@ abstract class ApiClient {
   /*@POST(ApiUrl.registerMobile)
   Future<dynamic> registerMobile(@Field("mobile_number") String mobileNumber);*/
 
-  @GET(ApiUrl.recent)
+  /*@GET(ApiUrl.recent)
   Future<List<MatchesIrecent>> matchIrecent();
-
+*/
   static Future<void> init(String baseUrl) async {
     var options = BaseOptions(
         connectTimeout: 30000,

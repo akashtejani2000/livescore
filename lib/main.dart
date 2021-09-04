@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: "Live Score",
-      initialRoute: AppRoute.demo2,
+      initialRoute: AppRoute.demo1,
       getPages: AppRoute.listRoutes,
       localizationsDelegates: [
         S.delegate,
