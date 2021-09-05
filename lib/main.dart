@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:live_score/network/api_urls.dart';
-import 'package:live_score/ui/JsonPraseDemo.dart';
 
 import 'constants/route.dart';
 import 'generated/l10n.dart';
@@ -20,15 +19,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: "Live Score",
-      // initialRoute: AppRoute.demo1,
-      // getPages: AppRoute.listRoutes,
-      // localizationsDelegates: [
-      //   S.delegate,
-      //   DefaultMaterialLocalizations.delegate,
-      //   DefaultCupertinoLocalizations.delegate,
-      //   DefaultWidgetsLocalizations.delegate,
-      // ],
-      home: JsonParseDemo(),
+      initialRoute: AppRoute.homepage,
+      getPages: AppRoute.listRoutes,
+      localizationsDelegates: const [
+        S.delegate,
+        DefaultMaterialLocalizations.delegate,
+        DefaultCupertinoLocalizations.delegate,
+        DefaultWidgetsLocalizations.delegate,
+      ],
+      // home: JsonParseDemo(),
     );
   }
 }

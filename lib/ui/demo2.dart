@@ -553,486 +553,486 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<List<AllMealPlanModel>> getAllMealPlanData(String item) async {
     String jsonString = '''
-    [
-  {
-    "id": 7,
-    "daily_allowance_actual_percentage": {
-      "Bone": [
-        0.01,
-        "Red"
-      ],
-      "Muscle Meat": [
-        46.15,
-        "Red"
-      ],
-      "Fruit and Veg": [
-        53.84,
-        "Red"
-      ]
-    },
-    "daily_calories_from_this_meal_plan": 823.25,
-    "imperial_weight_of_one_meal": 5.732025,
-    "meal_ingredients_would_make": 8,
-    "meals_per_day": 2,
-    "nutrient_value": [
-      {
-        "Calcium": [
-          249.5,
-          "mg",
-          "Yellow",
-          0.008800863,
-          "ounce"
-        ]
-      },
-      {
-        "Choline": [
-          203.65,
-          "mg",
-          "Green",
-          0.0071835501,
-          "ounce"
-        ]
-      },
-      {
-        "Copper": [
-          1.33,
-          "mg",
-          "Green",
-          0.00004691442,
-          "ounce"
-        ]
-      },
-      {
-        "Crude fat": [
-          29.75,
-          "g",
-          "Green",
-          1.0494015,
-          "ounce"
-        ]
-      },
-      {
-        "Folate": [
-          469,
-          "mcg",
-          "Green",
-          0.000016543506,
-          "ounce"
-        ]
-      },
-      {
-        "Iodine": [
-          2.1,
-          "mcg",
-          "Red",
-          7.40754e-8,
-          "ounce"
-        ]
-      },
-      {
-        "Iron": [
-          11.77,
-          "mg",
-          "Green",
-          0.00041517497999999997,
-          "ounce"
-        ]
-      },
-      {
-        "Magnesium": [
-          253,
-          "mg",
-          "Red",
-          0.008924322,
-          "ounce"
-        ]
-      },
-      {
-        "Manganese": [
-          1.82,
-          "mg",
-          "Green",
-          0.00006419868,
-          "ounce"
-        ]
-      },
-      {
-        "Niacin (B3)": [
-          11.88,
-          "mg",
-          "Green",
-          0.00041905512,
-          "ounce"
-        ]
-      },
-      {
-        "Omega-3 excl. ALA and SDA": [
-          0.03,
-          "g",
-          "Green",
-          0.00105822,
-          "ounce"
-        ]
-      },
-      {
-        "Omega-6": [
-          0.93,
-          "g",
-          "Green",
-          0.03280482,
-          "ounce"
-        ]
-      },
-      {
-        "Pantothenic acid (B5)": [
-          1.7,
-          "mg",
-          "Green",
-          0.000059965799999999994,
-          "ounce"
-        ]
-      },
-      {
-        "Phosphorus": [
-          800,
-          "mg",
-          "Yellow",
-          0.0282192,
-          "ounce"
-        ]
-      },
-      {
-        "Potassium": [
-          2766.5,
-          "mg",
-          "Red",
-          0.09758552100000001,
-          "ounce"
-        ]
-      },
-      {
-        "Protein": [
-          56.02,
-          "g",
-          "Green",
-          1.9760494800000001,
-          "ounce"
-        ]
-      },
-      {
-        "Riboflavin (B2)": [
-          0.54,
-          "mg",
-          "Green",
-          0.00001904796,
-          "ounce"
-        ]
-      },
-      {
-        "Selenium": [
-          39.05,
-          "mcg",
-          "Red",
-          0.0000013774497,
-          "ounce"
-        ]
-      },
-      {
-        "Sodium (Na)": [
-          123,
-          "mg",
-          "Green",
-          0.004338702,
-          "ounce"
-        ]
-      },
-      {
-        "Thiamin (B1)": [
-          0.78,
-          "mg",
-          "Green",
-          0.00002751372,
-          "ounce"
-        ]
-      },
-      {
-        "Vitamin A": [
-          4.2,
-          "mcg",
-          "Red",
-          1.481508e-7,
-          "ounce"
-        ]
-      },
-      {
-        "Vitamin C": [
-          1.75,
-          "mg",
-          "Green",
-          0.0000617295,
-          "ounce"
-        ]
-      },
-      {
-        "Vitamin D": [
-          0.15,
-          "mcg",
-          "Red",
-          5.2911000000000005e-9,
-          "ounce"
-        ]
-      },
-      {
-        "Vitamin E": [
-          1.03,
-          "mg",
-          "Red",
-          0.000036332220000000006,
-          "ounce"
-        ]
-      },
-      {
-        "Zinc (Zn)": [
-          8.24,
-          "mg",
-          "Green",
-          0.00029065776000000005,
-          "ounce"
-        ]
-      },
-      {
-        "Calories": [
-          823.25,
-          "cal",
-          null,
-          "N/A",
-          "ounce"
-        ]
-      }
-    ],
-    "pet_name": "grover",
-    "show_weight_of_balanced_meal": false,
-    "suggestion": {
-      "add_food": {
-        "Yellow": [
-          {
-            "Calcium": [
-              "Amaranth, grain, whole, uncooked",
-              "Apple, dried"
-            ]
-          },
-          {
-            "Phosphorus": [
-              "Amaranth, grain, whole, uncooked",
-              "Apple, dried"
-            ]
-          }
+      [
+    {
+      "id": 7,
+      "daily_allowance_actual_percentage": {
+        "Bone": [
+          0.01,
+          "Red"
         ],
-        "Red": [
-          {
-            "Iodine": [
-              "Amaranth, grain, whole, uncooked",
-              "Apricot, dried"
-            ]
-          },
-          {
-            "Vitamin A": [
-              "Bean, edamame, from frozen, cooked",
-              "Beef Brain"
-            ]
-          },
-          {
-            "Vitamin D": [
-              "Beef kidney, raw",
-              "Beef liver, raw"
-            ]
-          },
-          {
-            "Vitamin E": [
-              "Amaranth, grain, whole, uncooked",
-              "Apple, dried"
-            ]
-          },
-          {
-            "Choline": [
-              "Amaranth, grain, whole, uncooked",
-              "Apple, dried"
-            ]
-          },
-          {
-            "Copper": [
-              "Amaranth, grain, whole, uncooked",
-              "Apple, dried"
-            ]
-          },
-          {
-            "Crude fat": [
-              "Amaranth, grain, whole, uncooked",
-              "Apple, dried"
-            ]
-          },
-          {
-            "Folate": [
-              "Amaranth, grain, whole, uncooked",
-              "Apple, fuji, unpeeled, raw"
-            ]
-          },
-          {
-            "Iron": [
-              "Amaranth, grain, whole, uncooked",
-              "Apple, dried"
-            ]
-          },
-          {
-            "Manganese": [
-              "Amaranth, grain, whole, uncooked",
-              "Apple, dried"
-            ]
-          },
-          {
-            "Niacin (B3)": [
-              "Apple, fuji, unpeeled, raw",
-              "Apple, golden delicious, unpeeled, raw"
-            ]
-          },
-          {
-            "Omega-3 excl. ALA and SDA": [
-              "Bass, fillet, raw",
-              "Beef Brain"
-            ]
-          },
-          {
-            "Omega-6": [
-              "Amaranth, grain, whole, uncooked",
-              "Avocado, raw"
-            ]
-          },
-          {
-            "Pantothenic acid (B5)": [
-              "Amaranth, grain, whole, uncooked",
-              "Apple, dried"
-            ]
-          },
-          {
-            "Protein": [
-              "Amaranth, grain, whole, uncooked",
-              "Apple, dried"
-            ]
-          },
-          {
-            "Riboflavin (B2)": [
-              "Amaranth, grain, whole, uncooked",
-              "Apple, fuji, unpeeled, raw"
-            ]
-          },
-          {
-            "Sodium (Na)": [
-              "Amaranth, grain, whole, uncooked",
-              "Apple, dried"
-            ]
-          },
-          {
-            "Thiamin (B1)": [
-              "Amaranth, grain, whole, uncooked",
-              "Apple, fuji, unpeeled, raw"
-            ]
-          },
-          {
-            "Zinc (Zn)": [
-              "Amaranth, grain, whole, uncooked",
-              "Apple, dried"
-            ]
-          }
+        "Muscle Meat": [
+          46.15,
+          "Red"
+        ],
+        "Fruit and Veg": [
+          53.84,
+          "Red"
         ]
       },
-      "remove_food": {
-        "Yellow": [],
-        "Red": [
-          {
-            "Magnesium": [
-              "Beef, all cuts, untrimmed, raw, no bone",
-              "Apricot, dried"
-            ]
-          },
-          {
-            "Potassium": [
-              "Beef, all cuts, untrimmed, raw, no bone",
-              "Apricot, dried"
-            ]
-          },
-          {
-            "Selenium": [
-              "Beef, all cuts, untrimmed, raw, no bone",
-              "Apricot, dried"
-            ]
+      "daily_calories_from_this_meal_plan": 823.25,
+      "imperial_weight_of_one_meal": 5.732025,
+      "meal_ingredients_would_make": 8,
+      "meals_per_day": 2,
+      "nutrient_value": [
+        {
+          "Calcium": [
+            249.5,
+            "mg",
+            "Yellow",
+            0.008800863,
+            "ounce"
+          ]
+        },
+        {
+          "Choline": [
+            203.65,
+            "mg",
+            "Green",
+            0.0071835501,
+            "ounce"
+          ]
+        },
+        {
+          "Copper": [
+            1.33,
+            "mg",
+            "Green",
+            0.00004691442,
+            "ounce"
+          ]
+        },
+        {
+          "Crude fat": [
+            29.75,
+            "g",
+            "Green",
+            1.0494015,
+            "ounce"
+          ]
+        },
+        {
+          "Folate": [
+            469,
+            "mcg",
+            "Green",
+            0.000016543506,
+            "ounce"
+          ]
+        },
+        {
+          "Iodine": [
+            2.1,
+            "mcg",
+            "Red",
+            7.40754e-8,
+            "ounce"
+          ]
+        },
+        {
+          "Iron": [
+            11.77,
+            "mg",
+            "Green",
+            0.00041517497999999997,
+            "ounce"
+          ]
+        },
+        {
+          "Magnesium": [
+            253,
+            "mg",
+            "Red",
+            0.008924322,
+            "ounce"
+          ]
+        },
+        {
+          "Manganese": [
+            1.82,
+            "mg",
+            "Green",
+            0.00006419868,
+            "ounce"
+          ]
+        },
+        {
+          "Niacin (B3)": [
+            11.88,
+            "mg",
+            "Green",
+            0.00041905512,
+            "ounce"
+          ]
+        },
+        {
+          "Omega-3 excl. ALA and SDA": [
+            0.03,
+            "g",
+            "Green",
+            0.00105822,
+            "ounce"
+          ]
+        },
+        {
+          "Omega-6": [
+            0.93,
+            "g",
+            "Green",
+            0.03280482,
+            "ounce"
+          ]
+        },
+        {
+          "Pantothenic acid (B5)": [
+            1.7,
+            "mg",
+            "Green",
+            0.000059965799999999994,
+            "ounce"
+          ]
+        },
+        {
+          "Phosphorus": [
+            800,
+            "mg",
+            "Yellow",
+            0.0282192,
+            "ounce"
+          ]
+        },
+        {
+          "Potassium": [
+            2766.5,
+            "mg",
+            "Red",
+            0.09758552100000001,
+            "ounce"
+          ]
+        },
+        {
+          "Protein": [
+            56.02,
+            "g",
+            "Green",
+            1.9760494800000001,
+            "ounce"
+          ]
+        },
+        {
+          "Riboflavin (B2)": [
+            0.54,
+            "mg",
+            "Green",
+            0.00001904796,
+            "ounce"
+          ]
+        },
+        {
+          "Selenium": [
+            39.05,
+            "mcg",
+            "Red",
+            0.0000013774497,
+            "ounce"
+          ]
+        },
+        {
+          "Sodium (Na)": [
+            123,
+            "mg",
+            "Green",
+            0.004338702,
+            "ounce"
+          ]
+        },
+        {
+          "Thiamin (B1)": [
+            0.78,
+            "mg",
+            "Green",
+            0.00002751372,
+            "ounce"
+          ]
+        },
+        {
+          "Vitamin A": [
+            4.2,
+            "mcg",
+            "Red",
+            1.481508e-7,
+            "ounce"
+          ]
+        },
+        {
+          "Vitamin C": [
+            1.75,
+            "mg",
+            "Green",
+            0.0000617295,
+            "ounce"
+          ]
+        },
+        {
+          "Vitamin D": [
+            0.15,
+            "mcg",
+            "Red",
+            5.2911000000000005e-9,
+            "ounce"
+          ]
+        },
+        {
+          "Vitamin E": [
+            1.03,
+            "mg",
+            "Red",
+            0.000036332220000000006,
+            "ounce"
+          ]
+        },
+        {
+          "Zinc (Zn)": [
+            8.24,
+            "mg",
+            "Green",
+            0.00029065776000000005,
+            "ounce"
+          ]
+        },
+        {
+          "Calories": [
+            823.25,
+            "cal",
+            null,
+            "N/A",
+            "ounce"
+          ]
+        }
+      ],
+      "pet_name": "grover",
+      "show_weight_of_balanced_meal": false,
+      "suggestion": {
+        "add_food": {
+          "Yellow": [
+            {
+              "Calcium": [
+                "Amaranth, grain, whole, uncooked",
+                "Apple, dried"
+              ]
+            },
+            {
+              "Phosphorus": [
+                "Amaranth, grain, whole, uncooked",
+                "Apple, dried"
+              ]
+            }
+          ],
+          "Red": [
+            {
+              "Iodine": [
+                "Amaranth, grain, whole, uncooked",
+                "Apricot, dried"
+              ]
+            },
+            {
+              "Vitamin A": [
+                "Bean, edamame, from frozen, cooked",
+                "Beef Brain"
+              ]
+            },
+            {
+              "Vitamin D": [
+                "Beef kidney, raw",
+                "Beef liver, raw"
+              ]
+            },
+            {
+              "Vitamin E": [
+                "Amaranth, grain, whole, uncooked",
+                "Apple, dried"
+              ]
+            },
+            {
+              "Choline": [
+                "Amaranth, grain, whole, uncooked",
+                "Apple, dried"
+              ]
+            },
+            {
+              "Copper": [
+                "Amaranth, grain, whole, uncooked",
+                "Apple, dried"
+              ]
+            },
+            {
+              "Crude fat": [
+                "Amaranth, grain, whole, uncooked",
+                "Apple, dried"
+              ]
+            },
+            {
+              "Folate": [
+                "Amaranth, grain, whole, uncooked",
+                "Apple, fuji, unpeeled, raw"
+              ]
+            },
+            {
+              "Iron": [
+                "Amaranth, grain, whole, uncooked",
+                "Apple, dried"
+              ]
+            },
+            {
+              "Manganese": [
+                "Amaranth, grain, whole, uncooked",
+                "Apple, dried"
+              ]
+            },
+            {
+              "Niacin (B3)": [
+                "Apple, fuji, unpeeled, raw",
+                "Apple, golden delicious, unpeeled, raw"
+              ]
+            },
+            {
+              "Omega-3 excl. ALA and SDA": [
+                "Bass, fillet, raw",
+                "Beef Brain"
+              ]
+            },
+            {
+              "Omega-6": [
+                "Amaranth, grain, whole, uncooked",
+                "Avocado, raw"
+              ]
+            },
+            {
+              "Pantothenic acid (B5)": [
+                "Amaranth, grain, whole, uncooked",
+                "Apple, dried"
+              ]
+            },
+            {
+              "Protein": [
+                "Amaranth, grain, whole, uncooked",
+                "Apple, dried"
+              ]
+            },
+            {
+              "Riboflavin (B2)": [
+                "Amaranth, grain, whole, uncooked",
+                "Apple, fuji, unpeeled, raw"
+              ]
+            },
+            {
+              "Sodium (Na)": [
+                "Amaranth, grain, whole, uncooked",
+                "Apple, dried"
+              ]
+            },
+            {
+              "Thiamin (B1)": [
+                "Amaranth, grain, whole, uncooked",
+                "Apple, fuji, unpeeled, raw"
+              ]
+            },
+            {
+              "Zinc (Zn)": [
+                "Amaranth, grain, whole, uncooked",
+                "Apple, dried"
+              ]
+            }
+          ]
+        },
+        "remove_food": {
+          "Yellow": [],
+          "Red": [
+            {
+              "Magnesium": [
+                "Beef, all cuts, untrimmed, raw, no bone",
+                "Apricot, dried"
+              ]
+            },
+            {
+              "Potassium": [
+                "Beef, all cuts, untrimmed, raw, no bone",
+                "Apricot, dried"
+              ]
+            },
+            {
+              "Selenium": [
+                "Beef, all cuts, untrimmed, raw, no bone",
+                "Apricot, dried"
+              ]
+            }
+          ]
+        }
+      },
+      "total_calories_in_a_meal_plan": 3293,
+      "total_imperial_weight_of_a_meal_plan": 45.8562,
+      "total_weight_of_a_meal_plan": 1300,
+      "weight_of_one_meal": 162.5,
+      "feeding_plan_details": [
+        {
+          "id": 23,
+          "imperial_quantity": 14.1096,
+          "quantity": 400,
+          "food": {
+            "id": 5,
+            "bone_percentage": 0,
+            "calcium_phosphorous_ratio": 0.14,
+            "name": "Beef, all cuts, untrimmed, raw, no bone",
+            "omega_ratio": 0,
+            "omega_ratio_color": "Red",
+            "calcium_phosphorous_ratio_color": "Red"
           }
-        ]
-      }
-    },
-    "total_calories_in_a_meal_plan": 3293,
-    "total_imperial_weight_of_a_meal_plan": 45.8562,
-    "total_weight_of_a_meal_plan": 1300,
-    "weight_of_one_meal": 162.5,
-    "feeding_plan_details": [
-      {
-        "id": 23,
-        "imperial_quantity": 14.1096,
-        "quantity": 400,
-        "food": {
-          "id": 5,
-          "bone_percentage": 0,
-          "calcium_phosphorous_ratio": 0.14,
-          "name": "Beef, all cuts, untrimmed, raw, no bone",
-          "omega_ratio": 0,
-          "omega_ratio_color": "Red",
-          "calcium_phosphorous_ratio_color": "Red"
+        },
+        {
+          "id": 24,
+          "imperial_quantity": 7.0548,
+          "quantity": 200,
+          "food": {
+            "id": 45,
+            "bone_percentage": 0,
+            "calcium_phosphorous_ratio": 0.56,
+            "name": "Apricot, dried",
+            "omega_ratio": 0,
+            "omega_ratio_color": "Red",
+            "calcium_phosphorous_ratio_color": "Yellow"
+          }
+        },
+        {
+          "id": 25,
+          "imperial_quantity": 17.637,
+          "quantity": 500,
+          "food": {
+            "id": 222,
+            "bone_percentage": 0,
+            "calcium_phosphorous_ratio": 0.38,
+            "name": "Bean, haricot, dried",
+            "omega_ratio": 0,
+            "omega_ratio_color": "Red",
+            "calcium_phosphorous_ratio_color": "Red"
+          }
+        },
+        {
+          "id": 26,
+          "imperial_quantity": 7.0548,
+          "quantity": 200,
+          "food": {
+            "id": 294,
+            "bone_percentage": 0,
+            "calcium_phosphorous_ratio": 0.08,
+            "name": "Pork, all cuts, lean, raw",
+            "omega_ratio": 0.09,
+            "omega_ratio_color": "Yellow",
+            "calcium_phosphorous_ratio_color": "Red"
+          }
         }
-      },
-      {
-        "id": 24,
-        "imperial_quantity": 7.0548,
-        "quantity": 200,
-        "food": {
-          "id": 45,
-          "bone_percentage": 0,
-          "calcium_phosphorous_ratio": 0.56,
-          "name": "Apricot, dried",
-          "omega_ratio": 0,
-          "omega_ratio_color": "Red",
-          "calcium_phosphorous_ratio_color": "Yellow"
-        }
-      },
-      {
-        "id": 25,
-        "imperial_quantity": 17.637,
-        "quantity": 500,
-        "food": {
-          "id": 222,
-          "bone_percentage": 0,
-          "calcium_phosphorous_ratio": 0.38,
-          "name": "Bean, haricot, dried",
-          "omega_ratio": 0,
-          "omega_ratio_color": "Red",
-          "calcium_phosphorous_ratio_color": "Red"
-        }
-      },
-      {
-        "id": 26,
-        "imperial_quantity": 7.0548,
-        "quantity": 200,
-        "food": {
-          "id": 294,
-          "bone_percentage": 0,
-          "calcium_phosphorous_ratio": 0.08,
-          "name": "Pork, all cuts, lean, raw",
-          "omega_ratio": 0.09,
-          "omega_ratio_color": "Yellow",
-          "calcium_phosphorous_ratio_color": "Red"
-        }
-      }
-    ]
-  }
-]
+      ]
+    }
+  ]
     ''';
 
     http.Response response = http.Response(jsonString, 200);

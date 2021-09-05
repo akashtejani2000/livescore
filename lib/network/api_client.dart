@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:dio/dio.dart';
+import 'package:live_score/network/api_urls.dart';
 import 'package:live_score/utils/app_logger.dart';
 import 'package:live_score/utils/common_utils.dart';
 import 'package:live_score/utils/connectivity_utils.dart';
@@ -13,18 +14,15 @@ part 'api_client.g.dart';
 abstract class ApiClient {
   static late ApiClient _instance;
   static late Dio dio;
-  static final bool doWriteLog = true;
+  static const bool doWriteLog = true;
 
   static ApiClient get instance => _instance;
 
   factory ApiClient._private(Dio dio, {String baseUrl}) = _ApiClient;
 
-  /*@POST(ApiUrl.registerMobile)
-  Future<dynamic> registerMobile(@Field("mobile_number") String mobileNumber);*/
+  @GET(ApiUrl.recent, autoCastResponse: true)
+  Future<String> matchIrecent();
 
-  /*@GET(ApiUrl.recent)
-  Future<List<MatchesIrecent>> matchIrecent();
-*/
   static Future<void> init(String baseUrl) async {
     var options = BaseOptions(
         connectTimeout: 30000,
@@ -36,9 +34,9 @@ abstract class ApiClient {
         });
     dio = Dio(options);
     dio.interceptors.add(InterceptorsWrapper(onRequest: onRequest));
-    // dio.interceptors.add(RefreshTokenInterceptor(dio));
     dio.interceptors
         .add(InterceptorsWrapper(onResponse: onResponse, onError: onError));
+
     _instance = ApiClient._private(dio, baseUrl: baseUrl);
   }
 
@@ -46,10 +44,12 @@ abstract class ApiClient {
       RequestOptions options, RequestInterceptorHandler handler) async {
     if (!ConnectivityUtils.instance.hasInternet) {
       CommonUtils.showNoInternetDialog();
-      return handler.reject(DioError(
-          requestOptions: options,
-          type: DioErrorType.cancel,
-          error: "No Internet"));
+      return handler.reject(
+        DioError(
+            requestOptions: options,
+            type: DioErrorType.cancel,
+            error: "No Internet"),
+      );
     }
 
     /*if (AppPref.isLogin)
@@ -93,6 +93,7 @@ abstract class ApiClient {
     response.data = decryptedData;
     if (doWriteLog) AppLogger.log("DECRYPTED DATA :: ${response.data}");*/
     handler.next(response);
+    return response.data;
   }
 }
 

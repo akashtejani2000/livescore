@@ -34,7 +34,13 @@ class Homepage extends StatelessWidget {
           ],
         ),
       ),
-      body: SingleChildScrollView(
+      body: ListView.separated(
+        padding: const EdgeInsetsDirectional.fromSTEB(16, 16, 16, 16),
+        itemBuilder: (context, index) => const RecentMatchCard(),
+        separatorBuilder: (context, index) => const SizeBoxH(8),
+        itemCount: 5,
+      ),
+      /*SingleChildScrollView(
         padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 24),
         child: Column(
           children: [
@@ -44,14 +50,23 @@ class Homepage extends StatelessWidget {
               child: CarouselSliderView(),
             ),
             SizeBoxH(24),
-            Padding(
+            const Padding(
               padding: EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
               child: LiveCricketCard(),
             ),
           ],
         ),
-      ),
+      ),*/
     );
+  }
+}
+
+class TabView extends StatelessWidget {
+  const TabView({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
 
@@ -186,12 +201,12 @@ class LiveCricketCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  padding: EdgeInsetsDirectional.fromSTEB(12, 0, 12, 0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(12, 0, 12, 0),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(48),
                     color: AppColor.grey,
                   ),
-                  child: CommonText.medium(
+                  child: const CommonText.medium(
                     "Zimbabwe vs Ireland",
                     size: 12,
                     color: AppColor.white,
@@ -274,8 +289,8 @@ class LiveCricketCard extends StatelessWidget {
                               fit: BoxFit.cover,
                             )),
                       ),
-                      SizeBoxV(8),
-                      CommonText.semiBold(
+                      const SizeBoxV(8),
+                      const CommonText.semiBold(
                         "ZWE inngs",
                         size: 12,
                         color: AppColor.white,
@@ -301,14 +316,14 @@ class LiveCricketCard extends StatelessWidget {
                       ),
                     ],
                   ),
-                  CommonText.medium(
+                  const CommonText.medium(
                     "12.5 over",
                     color: AppColor.orange,
                     size: 14,
                     height: 1,
                   ),
                   Row(
-                    children: [
+                    children: const [
                       CommonText.medium(
                         "CRR 7.81",
                         size: 12,
@@ -358,6 +373,71 @@ class LiveCricketCard extends StatelessWidget {
             ],
           ),
           Spacer(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  children: [
+                    const CommonText.medium(
+                      "IND",
+                      size: 14.0,
+                      color: AppColor.white,
+                    ),
+                    Row(
+                      children: [
+                        CommonText.medium(
+                          "191",
+                          color: AppColor.greenLight,
+                          size: 14,
+                        ),
+                        CommonText.medium(
+                          "/",
+                          color: AppColor.white,
+                          size: 14,
+                        ),
+                        CommonText.medium(
+                          "10",
+                          color: AppColor.red,
+                          size: 14,
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+                Column(
+                  children: [
+                    CommonText.medium(
+                      "IND",
+                      size: 14.0,
+                      color: AppColor.white,
+                    ),
+                    Row(
+                      children: [
+                        CommonText.medium(
+                          "191",
+                          color: AppColor.greenLight,
+                          size: 14,
+                        ),
+                        CommonText.medium(
+                          "/",
+                          color: AppColor.white,
+                          size: 14,
+                        ),
+                        CommonText.medium(
+                          "10",
+                          color: AppColor.red,
+                          size: 14,
+                        ),
+                      ],
+                    )
+                  ],
+                )
+              ],
+            ),
+          ),
+          Spacer(),
         ],
       ),
     );
@@ -376,6 +456,105 @@ class CommonDivider extends StatelessWidget {
       color: AppColor.greyLight,
       height: height ?? 8,
       thickness: thickNess ?? 1,
+    );
+  }
+}
+
+class RecentMatchCard extends StatelessWidget {
+  const RecentMatchCard({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      margin: EdgeInsets.zero,
+      elevation: 4,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            Container(
+              padding: const EdgeInsets.all(4),
+              decoration: BoxDecoration(
+                color: AppColor.greyLight,
+                borderRadius: BorderRadius.circular(48),
+              ),
+              child: const Text("CP LEAGUE 2021"),
+            ),
+            const CommonText.regular("T20 #16 | 15hour ago"),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  children: const [
+                    CircleAvatar(
+                      radius: 8,
+                      backgroundImage: NetworkImage(
+                          "https://images.pexels.com/photos/3476860/pexels-photo-3476860.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"),
+                    ),
+                    SizeBoxH(),
+                    CircleAvatar(
+                      radius: 20,
+                      backgroundImage: NetworkImage(
+                          "https://images.pexels.com/photos/3476860/pexels-photo-3476860.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"),
+                    ),
+                    CommonText.semiBold(
+                      "BR",
+                      size: 14,
+                    ),
+                  ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: const [
+                    CommonText.semiBold(
+                      "130/10",
+                      size: 20,
+                    ),
+                    CommonText.medium("20 Overs"),
+                  ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    CommonText.semiBold(
+                      "130/10",
+                      size: 20,
+                    ),
+                    CommonText.medium("14.2 Overs"),
+                  ],
+                ),
+                Column(
+                  children: const [
+                    CircleAvatar(
+                      radius: 8,
+                      backgroundImage: NetworkImage(
+                          "https://images.pexels.com/photos/3476860/pexels-photo-3476860.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"),
+                    ),
+                    SizeBoxH(),
+                    CircleAvatar(
+                      radius: 20,
+                      backgroundImage: NetworkImage(
+                          "https://images.pexels.com/photos/3476860/pexels-photo-3476860.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"),
+                    ),
+                    CommonText.semiBold(
+                      "BR",
+                      size: 14,
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            SizeBoxH(),
+            CommonText.regular(
+              "Ga Warriors won by 9 wickets",
+              size: 14,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

@@ -11,33 +11,33 @@ String matchesIrecentToJson(MatchesIrecent data) => json.encode(data.toJson());
 
 class MatchesIrecent {
   MatchesIrecent({
-    this.ciRslt,
+    required this.ciRslt,
   });
 
-  CiRslt? ciRslt;
+  CiRslt ciRslt;
 
   factory MatchesIrecent.fromJson(Map<String, dynamic> json) => MatchesIrecent(
         ciRslt: CiRslt.fromJson(json["ci_rslt"]),
       );
 
   Map<String, dynamic> toJson() => {
-        "ci_rslt": ciRslt!.toJson(),
+        "ci_rslt": ciRslt.toJson(),
       };
 }
 
 class CiRslt {
   CiRslt({
-    this.mch,
+    required this.mch,
   });
 
-  List<Mch>? mch;
+  List<Mch> mch;
 
   factory CiRslt.fromJson(Map<String, dynamic> json) => CiRslt(
         mch: List<Mch>.from(json["mch"].map((x) => Mch.fromJson(x))),
       );
 
   Map<String, dynamic> toJson() => {
-        "mch": List<dynamic>.from(mch!.map((x) => x.toJson())),
+        "mch": List<dynamic>.from(mch.map((x) => x.toJson())),
       };
 }
 

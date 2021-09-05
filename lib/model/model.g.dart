@@ -6,9 +6,19 @@ part of 'model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
+CiResult _$CiResultFromJson(Map<String, dynamic> json) {
+  return CiResult(
+    ciResult: json['ci_rslt'] as String?,
+  );
+}
+
+Map<String, dynamic> _$CiResultToJson(CiResult instance) => <String, dynamic>{
+      'ci_rslt': instance.ciResult,
+    };
+
 DisplayScore _$DisplayScoreFromJson(Map<String, dynamic> json) {
   return DisplayScore(
-    matchDetails: (json['match_details'] as List<dynamic>?)
+    matchDetails: (json['mch'] as List<dynamic>?)
         ?.map((e) => MatchDetails.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
@@ -16,34 +26,35 @@ DisplayScore _$DisplayScoreFromJson(Map<String, dynamic> json) {
 
 Map<String, dynamic> _$DisplayScoreToJson(DisplayScore instance) =>
     <String, dynamic>{
-      'match_details': instance.matchDetails,
+      'mch': instance.matchDetails,
     };
 
 MatchDetails _$MatchDetailsFromJson(Map<String, dynamic> json) {
-  return MatchDetails()
-    ..matchInfo = json['match_info'] == null
+  return MatchDetails(
+    matchInfo: json[r'$'] == null
         ? null
-        : MatchInfo.fromJson(json['match_info'] as Map<String, dynamic>)
-    ..event = (json['event'] as List<dynamic>?)
-        ?.map((e) => Event.fromJson(e as Map<String, dynamic>))
-        .toList()
-    ..venue = (json['venue'] as List<dynamic>?)
+        : MatchInfo.fromJson(json[r'$'] as Map<String, dynamic>),
+    event: (json['evt'] as List<dynamic>?)
+        ?.map((e) => EventData.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    venue: (json['vnu'] as List<dynamic>?)
         ?.map((e) => VenueInfo.fromJson(e as Map<String, dynamic>))
-        .toList()
-    ..tma = (json['tma'] as List<dynamic>?)
+        .toList(),
+    tma: (json['tma'] as List<dynamic>?)
         ?.map((e) => Tma.fromJson(e as Map<String, dynamic>))
-        .toList()
-    ..tmb = (json['tmb'] as List<dynamic>?)
+        .toList(),
+    tmb: (json['tmb'] as List<dynamic>?)
         ?.map((e) => Tmb.fromJson(e as Map<String, dynamic>))
-        .toList()
-    ..nts = (json['nts'] as List<dynamic>?)?.map((e) => e as String).toList();
+        .toList(),
+    nts: (json['nts'] as List<dynamic>?)?.map((e) => e as String).toList(),
+  );
 }
 
 Map<String, dynamic> _$MatchDetailsToJson(MatchDetails instance) =>
     <String, dynamic>{
-      'match_info': instance.matchInfo,
-      'event': instance.event,
-      'venue': instance.venue,
+      r'$': instance.matchInfo,
+      'evt': instance.event,
+      'vnu': instance.venue,
       'tma': instance.tma,
       'tmb': instance.tmb,
       'nts': instance.nts,
@@ -85,15 +96,16 @@ Map<String, dynamic> _$MatchInfoToJson(MatchInfo instance) => <String, dynamic>{
       'tssn': instance.tssn,
     };
 
-Event _$EventFromJson(Map<String, dynamic> json) {
-  return Event()
-    ..seriesName = json['_'] as String?
-    ..eventInfo = (json[r'$'] as List<dynamic>?)
+EventData _$EventDataFromJson(Map<String, dynamic> json) {
+  return EventData(
+    seriesName: json['_'] as String?,
+    eventInfo: (json[r'$'] as List<dynamic>?)
         ?.map((e) => EventInfo.fromJson(e as Map<String, dynamic>))
-        .toList();
+        .toList(),
+  );
 }
 
-Map<String, dynamic> _$EventToJson(Event instance) => <String, dynamic>{
+Map<String, dynamic> _$EventDataToJson(EventData instance) => <String, dynamic>{
       '_': instance.seriesName,
       r'$': instance.eventInfo,
     };
