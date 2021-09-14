@@ -32,3 +32,11 @@ class MyApp extends StatelessWidget {
   }
 }
 
+//argument pass
+
+// Get.delete<String>(tag:"tagName");
+//Get.put<String>("ABC",tag:"tagName");
+
+//argument get
+
+// var result=Get.find<String>(tag:"tagName");
